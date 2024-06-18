@@ -64,13 +64,13 @@ img {
 body {
   padding-inline: 2.4rem;
 
-
   & header {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
     margin-top: 2.8rem;
+    margin-bottom: 3.5rem;
     margin-inline: auto;
     width: 80%;
 
@@ -121,27 +121,56 @@ body {
     }
   }
 
-  main {
+  & main {
     display: flex;
     flex-flow: column;
 
     & section {
-      margin-inline: auto;
+      width: 70%;
       min-height: 850px;
+      padding-top: 6.2rem;
+      margin-inline: auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      gap: 10rem;
+
+      & .section-title {
+        text-align: center;
+        font-size: 5.2rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        margin-bottom: 1rem;
+        color: var(--light-color);
+      }
+
+      & .section-subtitle {
+        justify-content: center;
+        width: 41.1rem;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+        color: var(--light-color);
+        margin-bottom: 2.8rem;
+      }
     }
 
     & .hero-section {
-      margin-block: 5.7rem;
+      margin-block-end: 5.7rem;
       display: flex;
       flex-flow: column;
+      justify-content: flex-start;
       align-items: center;
       gap: 5.7rem;
 
       & .hero-info {
         display: flex;
-        display: flex;
         flex-flow: column;
-        align-items: center;
         gap: 2.7rem;
         width: 582px;
 
@@ -197,6 +226,65 @@ body {
         }
       }
     }
+
+    & .features-section {
+      display: flex;
+      flex-flow: column;
+      gap: 2.7rem;
+
+      & .feature-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 108rem;
+        gap: 2.7rem;
+        & > img {
+          width: 100%;
+        }
+
+        & .features-categories {
+          max-width: 27rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-flow: column;
+          gap: 2.5rem;
+
+          & .features {
+            display: flex;
+            flex-flow: column;
+
+            & .features-header {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-block-end: 1rem;
+              & img {
+                padding-block-end: 1.9rem;
+              }
+              & h3 {
+                width: 17rem;
+                color: var(--light-color);
+                font-size: 2rem;
+                line-height: 1.5;
+                font-weight: 500;
+                letter-spacing: 0.1px;
+                padding: 1rem;
+              }
+            }
+
+            & p {
+              width: 25rem;
+              color: var(--light-color);
+              font-size: 1.6rem;
+              font-weight: 400;
+              line-height: 1.5;
+              letter-spacing: 0.2px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -207,19 +295,15 @@ body {
       max-width: 0;
     }
   }
-  main {
-    & section {
-      width: 70%;
-      min-height: 100dvh;
-    }
-  }
-
   .hero-act {
+    flex-flow: row;
+  }
+  .feature-content {
     flex-flow: row;
   }
 }
 
-@media (width <= 768px) {
+@media (width <= 745px) {
   html {
     font-size: 54.69%;
   }
@@ -241,10 +325,14 @@ body {
   .hero-act {
     flex-flow: column;
   }
+
+  .feature-content {
+    flex-flow: column;
+  }
 }
-@media (width > 501px){
-  body{
-    &::before {
+@media (width > 501px) {
+  body {
+    /* &::before {
       content: '';
       position: absolute;
       top: 130px;
@@ -259,12 +347,11 @@ body {
       background-clip: padding-box;
       z-index: -1;
       filter: blur(1.2px);
-    }
+    } */
   }
 }
 @media (width < 500px) {
-
-  body{
+  /* body {
     &::before {
       content: '';
       position: absolute;
@@ -281,9 +368,9 @@ body {
       z-index: -1;
       filter: blur(1.2px);
     }
-  }
+  } */
 
-  header > img{
+  header > img {
     width: 120px;
   }
 }
