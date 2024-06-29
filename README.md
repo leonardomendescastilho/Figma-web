@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - vanilla JavaScript
 
 ## 💻 Projeto
-Projeto é um website, landing page, para uma marca fictícia com objetivo de agregar valor ao produto vendido.
+O Projeto é uma landing page.
 
 
 
